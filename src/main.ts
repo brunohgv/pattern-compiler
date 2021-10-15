@@ -1,6 +1,14 @@
+import GlobalState from "./models/globalState"
+
+
 const app = document.querySelector<HTMLDivElement>('#app')!
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+const global = new GlobalState()
+global.charAssign('f', './assets/block.png')
+global.charAssign('c', './assets/coin.png')
+global.charAssign('b', './assets/box.png')
+
+
+console.log(global.getAssignedTile('f'))
+
+app.innerHTML = `${global.getAssignedTile('f')}`
