@@ -11,11 +11,15 @@ export default class GlobalState {
         this.characterMap = new Map()
     }
 
-    charAssign(character: Char, tilePath: string) {
+    charAssign(character: Char, tilePath: string): void {
         this.characterMap.set(character, tilePath)
     }
 
-    getAssignedTile(character: Char) {
+    getAssignedTile(character: Char): string | undefined {
         return this.characterMap.get(character)
+    }
+
+    getCharMap(): Map<Char, string> {
+        return this.characterMap
     }
 }
