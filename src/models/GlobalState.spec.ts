@@ -1,4 +1,4 @@
-import GlobalState from "./globalState"
+import GlobalState from "./GlobalState"
 
 describe('GlobalState', () => {
     describe('initial state', () => {
