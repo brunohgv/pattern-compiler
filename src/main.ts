@@ -1,4 +1,4 @@
-import GlobalState from "./models/globalState"
+import GlobalState from "./models/GlobalState"
 
 
 const app = document.querySelector<HTMLDivElement>('#app')!
